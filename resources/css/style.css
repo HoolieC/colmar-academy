@@ -13,25 +13,49 @@ h2{
     overflow-y: scroll;
   }
 }
+
+img{
+  min-height: 32px;
+}
 /*Utilities*/
 .container{
   margin:auto;
   width: 100%;
 }
 
-
-.robo{
-font-family: 'Roboto Mono', monospace;
+@font-face {
+  font-family: "bio",serif;
+  src:url(../fonts/BioRhyme-Bold.ttf);
 }
-.rubik{
-  font-family: "Rubik-Medium", sans-serif;
+
+@font-face {
+  font-family: "space",monospace;
+  src: url(../fonts/SpaceMono-Regular.ttf);
+}
+
+.Bio{
+  font-family: "bio",sans-serif;
+  font-weight: bold;
+}
+
+.Space{
+  font-family: "space",monospace;
+}
+h3{
+  font-family: "bio",sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 /*navigation*/
 header{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   height: 64px;
   padding-left:24px;
   padding-right: 24px;
+  background-color: #00211D;
 }
 nav{
   display: flex;
@@ -40,13 +64,14 @@ nav{
   margin-top: 1rem;
 }
 
-
 nav span{
+  font-family: "bio",serif;
   font-weight: bold;
   font-size: 2rem;
+  color: #62B6AD;
 }
 nav i{
-  font-family: "Roboto-light",monospace;
+  color: #00CFB9;
   font-style: normal;
   font-size: 2rem;
 }
@@ -76,10 +101,8 @@ ul li{
   font-weight: bold;
 }
 
-nav a{
-color: black;
-}
-.mobile-nav{
+
+.mobile{
   display: none;
 }
 /*Media Screen for navigation*/
@@ -94,33 +117,34 @@ nav span, nav img{
 nav a{
   color:black;
 }
-.mobile-nav{
+.mobile{
   display:inline;
   justify-content: space-around;
   align-items: center;
   height: 64px;
   width: 100%;
-  background-color: red;
-}
-
 
 }
 
 
+}
 
-
-
-/*Main*/
+/*hero section*/
 .banner{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #696969;
+  background-color: #1D6A62;
+  color: white;
+}
+
+.banner img{
+  width: 60%;
+  margin: 32px 24px;
 }
 
 .headline{
-  font-family:"Rubik", monospace;
   line-height: 1.5;
+  font-family: "space",monospace;;
 }
 .headline h1{
   font-weight: bold;
@@ -128,16 +152,9 @@ nav a{
   word-spacing: 3px;
 }
 
-.headline p{
-  font-size: 2rem;
-}
-.banner img{
-  width: 60%;
-  margin: 32px 24px;
-}
+
 button{
   padding: 8px;
-  font-family: "Rubik-Medium", sans-serif;
   color: white;
   background-color: black;
   width: 60%;
@@ -147,162 +164,275 @@ button{
 }
 
 button:hover{
-  background-color: teal;
+  background-color: #597B77;
 }
 
 button:active{
-  background-color: teal;
   color: red;
 }
-@media screen (max-width:600px){
+@media screen and (max-width:600px){
   .banner{
     display: block;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #696969;
   }
 
   .banner img{
     width: 100%;
     margin-left: 0;
   }
+  .headline h1{
+    font-size: 1.5rem;
+    word-spacing: 3px;
+  }
+  .headline p{
+    font-size: 1rem;
+  }
+  button{
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+
 }
+
 /*Information*/
 .main{
   display: flex;
   width: 100%;
-  margin-bottom: 32px;
   text-align: left;
+  font-size: 1rem;
 }
 .media-content{
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex-shrink: 2;
   width: 60%;
   background-position: center;
-  border-right: 1px solid dimgray;
+  border-right: 1px solid #587E7A;
 }
-.descriptor h2{
-  margin-top: 32px;
-  margin-bottom: 24px;
+@media screen and (max-width:600px){
+  html{
+    font-size: 18px;
+  }
+  .media-content{
+    display: none;
+  }
+}
+
+.main h2{
+  margin: 2rem 0 1.5rem 0;
+}
+
+.main span{
+  font-size: 0.8rem;
+  display:block;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 900;
 }
 
 .horizontal-box{
   display: flex;
-  justify-content:flex-start;
   align-items: center;
-  text-align: justify;
   word-wrap: break-word;
   width: 93%;
   padding: 16px;
-  font-family: "Roboto-light",monospace;
-  border: 1px solid whitesmoke;
 }
-.horizontal-box:last-child{
-  background-color: whitesmoke;
+.mobile-img{
+  display: none;
+}
+@media screen and (max-width:600px){
+  .desktop-image{
+    display: none;
+  }
+  .horizontal-box{
+    display: block;
+    padding-left: 0;
+    padding-top: 0;
+    width: 100%;
+  }
+  .horizontal-box a{
+    color:black;
+  }
+  .mobile-img{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+  .mobile-img img{
+    width: 100%;
+  }
+
+}
+
+.box-color{
+  background-color: white;
+  transition: width 1s;
+}
+.box-color:hover{
+  width: 100%;
+  background-color: #AA632F;
 }
 
 .horizontal-box a{
   color:blue;
 }
+
+.horizontal-box:nth-child(2n+1){
+  background-color: #096200;
+}
+.horizontal-box:nth-child(2n+0){
+  background-color: #B9050E;
+}
+
+
 .horizontal-box img{
   width: 35%;
   height: auto;
 }
 .descriptor{
-  margin: 16px;
+  margin: 1rem;
   word-wrap: break-word;
-  background-color: white;
   width: inherit;
 }
 
-.descriptor h4{
+h4{
   font-size: 1.5rem;
 }
-/*Courses Section*/
-
+/*class offer Section*/
+  .offer{
+    font-size: 1rem;
+    background-color: #009B8B;
+  }
   .title{
   font-size: 2.5rem;
-  margin-bottom: 32px;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   width: 100%;
+  display: block;
 }
-.courses{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
+.desktop-offer{
+  display:flex;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 32px 72px;
-  background-color: whitesmoke;
-}
-.vertical-box{
-  background-color: white;
-  margin-right: 32px;
-  margin-bottom: 32px;
 }
 
-.course-description{
+.mobile-offer{
+  display: none;
+}
+@media screen and (max-width:600px){
+  .desktop-offer{
+    display: none;
+  }
+  .mobile-offer{
+    display: block;
+  }
+  .title{
+    color: white;
+  }
+  .box{
+    font-size: .5rem;
+    font-family: "space",monospace;
+    color: white;
+    width: auto;
+    margin-bottom: .5rem;
+    padding: 1rem 0 1.5rem 1rem;
+  }
+  .box:nth-child(2n+1){
+    background-color: #8F0007;
+  }
+}
+
+
+
+.class{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem 2rem 1rem;
+  max-width: 27%;
   background-color: white;
-  margin-top:50% ;
-  padding: 16px 16px 24px 16px;
-  word-break: break-all;
+}
+.class img{
+  width: 100%;
+  height: auto;
+}
+.class-description{
+  margin: 2rem 6.5rem 1.5rem 1rem;
+}
+.class-description p{
+  margin-top: 0.5rem;
   text-align: left;
-  line-height: 1.8;
 }
-.course-description p,h4{
-padding-top:8px;
-padding-bottom:8px;
-}
-.course-description h4{
-font-weight: bold;
-font-size: 1.5rem;
-}
-.vertical-box:hover{
-  transition: all 1ms linear .75s;
-  border: 1px solid gold;
-}
-/*images*/
 
-.software{
-background-image: url("../images/course-software.jpg");
-height: auto;
-background-position: top;
+.class:nth-child(3n+1){
+  margin-left: 4.5rem;
 }
-.art{
-background-image: url("../images/course-computer-art.jpg");
-height: auto;
-background-position: top;
+.class:nth-child(1n+2){
+  font-family: "space",monospace;
+  background-color: #063E00;
+  font-weight: bold;
+  color: white;
 }
-.design{
-background-image: url("../images/course-design.jpg");
-height: auto;
-background-position: top;
+.class:nth-child(2n+1){
+  font-family: "bio",sans-serif;
+  background-color: #020A34;
+  font-weight: bold;
+  color: white;
 }
-.data{
-background-image: url("../images/course-data.jpg");
-height: auto;
-background-position: top;
+.class:nth-child(4n+1){
+  font-family: "space",sans-serif;
+  background-color: #090956;
+  font-weight: bold;
+  color: white;
 }
-.business{
-background-image: url("../images/course-business.jpg");
-height: auto;
-background-position: top;
+.class:nth-child(3n+0){
+  font-family: "space",sans-serif;
+  background-color: #1111AF;
+  font-weight: bold;
+  color: white;
 }
-.marketing{
-background-image: url("../images/course-marketing.jpg");
-height: auto;
-background-position: top;
-}
+
+
 /*Thesis Exhibit Section*/
 .thesis{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32px 24px;
+  font-size: 1.5rem;
+  background-color:#3B0837;
+  color: white;
 }
-.left-column{
-  width: 60%
+
+.thesis{
+  border: none;
+}
+.exhibit{
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+@media screen and (max-width:600px){
+  .news{
+    display: none;
+  }
+
+  .exhibit{
+    width: 100%;
+    padding: 0;
+  }
+  .exhibit h2,p{
+    display: none;
+  }
+
+}
+/*footer*/
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 1rem 0 2rem 1.5rem;
+  background-color: #00100F;
+  color: white;
 }
