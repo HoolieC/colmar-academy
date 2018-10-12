@@ -160,6 +160,8 @@ button:hover{
 button:active{
   color: red;
 }
+
+/*Main Banner Media Screen*/
 @media screen and (max-width:600px){
   .banner{
     display: block;
@@ -184,11 +186,16 @@ button:active{
 }
 
 /*Information*/
+.information{
+  background-color: #00100F;
+}
 .main{
   display: flex;
   width: 100%;
   text-align: left;
   font-size: 1rem;
+  background-color: #00100F;
+  color: white;
 }
 .media-content{
   padding: 32px 24px;
@@ -227,9 +234,10 @@ button:active{
   width: 93%;
   padding: 16px;
 }
-.mobile-img{
+#mobile-img{
   display: none;
 }
+
 @media screen and (max-width:600px){
   .desktop-image{
     display: none;
@@ -239,17 +247,19 @@ button:active{
     padding-left: 0;
     padding-top: 0;
     width: 100%;
+
   }
+
   .horizontal-box a{
     color:black;
   }
-  .mobile-img{
-    display: block;
-    align-items: center;
-    justify-content:center;
-  }
-  .mobile-img img{
+
+  #mobile-img{
+    display: flex;
+    align-items: flex-start;
+    align-items: flex-start;
     width: 100%;
+    margin-bottom: 1rem;
   }
 
 }
@@ -329,7 +339,7 @@ h4{
     padding: 1rem 0 1.5rem 1rem;
   }
   .box:nth-child(2n+1){
-    background-color: #8F0007;
+    background-color: #005F55;
   }
 }
 
