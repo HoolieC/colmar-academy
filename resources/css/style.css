@@ -49,7 +49,7 @@ h3{
 /*navigation*/
 header{
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   width: 100%;
   height: 4rem;
   background-color: #00211D;
@@ -116,7 +116,7 @@ nav img{
   padding-left: 3rem;
   }
   header{
-    max-width: 600px;
+    height: 4rem;
   }
 }
 
@@ -330,7 +330,7 @@ h4{
   }
   .mobile-offer{
     display: block;
-    max-width: 600px;
+    width: 100%;
   }
   .title{
     color: white;
@@ -424,11 +424,13 @@ h4{
   }
 
   .exhibit{
-    max-width: 600px;
     padding: 0;
   }
   .exhibit h2,p{
     display: none;
+  }
+  video{
+    width: 100%;
   }
 
 }
