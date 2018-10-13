@@ -434,9 +434,9 @@ h4{
   .exhibit h2,p{
     display: none;
   }
-  video{
-    width: 100%;
-  }
+video{
+  display: block;
+}
 
 }
 /*footer*/
