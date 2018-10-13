@@ -118,7 +118,7 @@ nav img{
   }
   header{
     height: 4rem;
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -434,12 +434,13 @@ h4{
 
   .exhibit{
     padding: 0;
+    width: 100%;
   }
   .exhibit h2,p{
     display: none;
   }
 video{
-  width: auto;
+  width: inherit;
 }
 
 }
