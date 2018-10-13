@@ -116,6 +116,9 @@ nav img{
   padding-top: 1rem;
   padding-left: 3rem;
   }
+  header{
+    overflow: hidden;
+  }
 }
 
 /*hero section*/
@@ -332,11 +335,9 @@ h4{
   .title{
     color: white;
   }
-  .class-description{
-    font-size: .5rem;
-  }
+
   .box{
-    font-size: .5rem;
+    font-size: .05rem;
     font-family: "space",monospace;
     color: white;
     width: auto;
