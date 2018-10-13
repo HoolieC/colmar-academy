@@ -366,6 +366,7 @@ h4{
 
   .box:nth-child(2n+1){
     background-color: #005F55;
+    width: 480px;
   }
 }
 
@@ -456,6 +457,7 @@ h4{
   }
   .mobile-video{
     display: block;
+    width: 480px;
   }
 
 }
