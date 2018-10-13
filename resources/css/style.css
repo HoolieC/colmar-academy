@@ -12,6 +12,9 @@ h2{
     overflow: scroll;
     overflow-x: hidden;
   }
+  .title{
+    width: 480px;
+  }
 }
 
 img{
@@ -174,11 +177,11 @@ button:active{
   }
 
   .banner img{
-    width: 100%;
+    width: 480px;
     padding-left: 0;
   }
   .headline{
-    width: 100%;
+    width: 480px;
   }
   .headline h1{
     font-size: 1.5rem;
@@ -275,7 +278,7 @@ button:active{
     display: flex;
     align-items: flex-start;
     align-items: flex-start;
-    width: 100%;
+    width: 480px;
     margin-bottom: 1rem;
   }
 
@@ -353,7 +356,7 @@ h4{
   .box{
     font-family: "space",monospace;
     color: white;
-    width: auto;
+    width: 480px;
     margin-bottom: .5rem;
     padding: 1rem 0 1.5rem 1rem;
   }
