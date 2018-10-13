@@ -7,7 +7,7 @@ h2{
   font-size: 3rem;
   font-weight: bold;
 }
-@media screen and (max-width:600px), (orientation:landscape){
+@media screen and (max-width:600px){
   html {
     overflow: scroll;
   }
@@ -101,7 +101,7 @@ ul li{
   display: none;
 }
 /*Media Screen for navigation*/
-@media screen and (max-width:600px),(orientation:landscape){
+@media screen and (max-width:600px){
 .desktop{
   display: none;
 }
@@ -166,7 +166,7 @@ button:active{
 }
 
 /*Main Banner Media Screen*/
-@media screen and (max-width:600px),(orientation:landscape){
+@media screen and (max-width:600px){
   .banner{
     display: block;
     width: 100%;
@@ -211,7 +211,7 @@ button:active{
   background-position: center;
   border-right: 1px solid #587E7A;
 }
-@media screen and (max-width:600px),(orientation:landscape){
+@media screen and (max-width:600px){
   html{
     font-size: 18px;
   }
@@ -243,7 +243,7 @@ button:active{
   display: none;
 }
 
-@media screen and (max-width:600px), (orientation:landscape){
+@media screen and (max-width:600px){
   .desktop-image{
     display: none;
   }
@@ -326,7 +326,7 @@ h4{
 .mobile-offer{
   display: none;
 }
-@media screen and (max-width:600px), (orientation:landscape){
+@media screen and (max-width:600px){
   .desktop-offer{
     display: none;
   }
@@ -423,7 +423,7 @@ h4{
   width: 60%;
 }
 
-@media screen and (max-width:600px) ,(orientation:landscape){
+@media screen and (max-width:600px){
   .news{
     display: none;
   }
@@ -450,7 +450,7 @@ footer{
   color: white;
   width: 100%;
 }
-@media screen and (max-width:600px),(orientation:landscape){
+@media screen and (max-width:600px){
   footer{
     padding-top: 1.5rem;
     font-size: 0.75rem;
