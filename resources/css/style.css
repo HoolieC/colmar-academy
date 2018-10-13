@@ -177,6 +177,9 @@ button:active{
     width: 100%;
     padding-left: 0;
   }
+  .headline{
+    width: 100%;
+  }
   .headline h1{
     font-size: 1.5rem;
     word-spacing: 3px;
@@ -221,6 +224,7 @@ button:active{
   }
   .main{
     display: block;
+    width: 100%;
   }
 }
 
@@ -251,6 +255,10 @@ button:active{
   .desktop-image{
     display: none;
   }
+  .events{
+    width: 100%;
+  }
+
   .horizontal-box{
     display: block;
     padding-left: 0;
@@ -336,7 +344,7 @@ h4{
   }
   .mobile-offer{
     display: block;
-    width: 100%;
+    width: 110%;
   }
   .title{
     color: white;
